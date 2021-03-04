@@ -7,6 +7,15 @@ import messaging from '@react-native-firebase/messaging';
 const App = () => {
   const [orderStatus, setOrderStatus] = useState('feito');
 
+  const handleNotifOpen = (remoteMessage) => {
+    if (remoteMessage) {
+      console.log('Abriu o app', remoteMessage);
+      if (remoteMessage.data.newStatus) {
+        setOrderStatus(remoteMessage.data.newStatus);
+      }
+    }
+  };
+
   useEffect(() => {
     //permissão para notifica
     const requestNotifPermission = async () => {
@@ -24,6 +33,13 @@ const App = () => {
       }
     });
 
+    //evento para click  para notificacao(em background)
+
+    messaging().onNotificationOpenedApp(handleNotifOpen);
+
+    //Evento para click na notificacao (com app totalmente fechado)
+    messaging().getInitialNotification().then(handleNotifOpen);
+
     return unsubscribe;
   }, []);
 
@@ -33,7 +49,7 @@ const App = () => {
       <Text style={styles.orderStylesText}>Status:</Text>
       <Text>{orderStatus === 'feito' && 'Seu Pedido esta pronto'}</Text>
       <Text>{orderStatus === 'fazendo' && 'Seu Pedido esta sendo feito'}</Text>
-      <Text>{orderStatus === 'aceito' && 'Seu Pedido esta na fila'}</Text>
+      <Text>{orderStatus === 'aceito' && 'Seu Pedido esta na filaaaaaa'}</Text>
     </SafeAreaView>
   );
 };
