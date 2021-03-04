@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "999640456438",
+    "project_id": "fir-notification-abebb",
+    "storage_bucket": "fir-notification-abebb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:999640456438:android:f9da0155265991c5f920d7",
+        "android_client_info": {
+          "package_name": "com.firebasenotification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "999640456438-33ksueqrpiibrqd5hmpas7s7jff5l1rs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRDoX2sigQUhPEoE99ZdVqCFJUTG5qraw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "999640456438-33ksueqrpiibrqd5hmpas7s7jff5l1rs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "999640456438-6juo883sg9a3qecc6pr3uin0q5fsmutc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.firebasenotification"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
