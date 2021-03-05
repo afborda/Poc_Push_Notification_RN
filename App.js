@@ -25,6 +25,13 @@ const App = () => {
 
     requestNotifPermission();
 
+    //Pegando o token do dispositivo
+    messaging()
+      .getToken()
+      .then((token) => {
+        console.log('Token do dispositivo', token);
+      });
+
     //Recebendo notificação foreground (app Aberto )
     const unsubscribe = messaging().onMessage(async (remoteMessage) => {
       console.log('>>', remoteMessage);
